@@ -28,8 +28,8 @@
                                         <td class="px-4 py-2 text-sm text-gray-900">{{ $order->customer_id }}</td>
                                         <td class="px-4 py-2 text-sm text-gray-900">
                                             {{ $order->address1 ?? '' }},
-                                            {{ $order->address2 ?? '' }},
-                                            {{ $order->state ?? '' }},
+                                            {{ $order->address2 ?? '' }}
+                                            {{ $order->state ?? '' }}
                                             {{ $order->country ?? '' }}
                                         </td>
                                         <td class="px-4 py-2 text-sm text-gray-900">{{ $order->order_delivery_status ?? '' }}</td>
