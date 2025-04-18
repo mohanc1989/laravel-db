@@ -12,7 +12,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard',['user' => Auth::user()]);
 })->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/order/report', [ReportController::class, 'index']);
+Route::get('/order/report', [ReportController::class, 'index'])->middleware(['auth', 'role:customer']);
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
